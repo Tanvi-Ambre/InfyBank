@@ -120,14 +120,14 @@
             </h3>
             <form action="" method="POST">
                 <div class = "horizontal-center">
-                    <label for = "login-id">Login ID / Phone Number</label>
+                    <label  for = "login-id">Login ID / Phone Number</label>
                     <input type="text" id = "login-id" name = "login_id" placeholder = "Enter Email ID/Phone Number" required>
                     <br><br>
-                    <label for = "login-pass">Password</label>
+                    <label  for = "login-pass">Password</label>
                     <input type="password" id = "login-pass" name = "login_pass" placeholder = "Enter password" required>
                 </div>
                 <br>
-                <div>
+                <div class="footer">
                     <button type="submit" id = "btn-login" name = "btn_login">Login</button>
                     <button type="reset" id = "btn-reset" name = "btn_reset">Reset</button>
                 </div>

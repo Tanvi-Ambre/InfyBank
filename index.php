@@ -38,41 +38,46 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <div>
-            <h1 class = "text-center">
-                <?php echo $app_name; ?>
-            </h1>
+        <main>
+            <header>
+                <h1 class = "text-center">
+                    <?php echo $app_name; ?>
+                </h1>
+            </header>
+            <section>
 
-            <p>Welcome Admin!</p>
-            <br>
+                <p>Welcome Admin!</p>
+                <br>
 
-            <div>
-                <?php include "sidebar.php"; ?>
-            </div>
-
-            <div>
-                <?php if(!empty($error_messages)): ?>
-                    <?php foreach($error_messages as $message): ?>
-                        <div>
-                            <?php echo $message; ?>
-                        </div>
-                        <br>
-                    <?php endforeach; ?>
-                    <?php unset($error_messages); ?>
-                <?php else: ?>
-                    <h3>Offers</h3>
-                    <?php if(!empty($offer_details)): ?>
-                        <?php foreach($offer_details as $offer): ?>
+                <div>
+                    <?php include "sidebar.php"; ?>
+                </div>
+                
+            </section>
+                <article>
+                    <?php if(!empty($error_messages)): ?>
+                        <?php foreach($error_messages as $message): ?>
                             <div>
-                                <?php echo $offer["Offer_Details"]; ?>
+                                <?php echo $message; ?>
                             </div>
                             <br>
                         <?php endforeach; ?>
-                    <?php else:?>
-                        <div>No Offers available</div>
+                        <?php unset($error_messages); ?>
+                    <?php else: ?>
+                    
+                            <h3>Offers</h3>
+                            <?php if(!empty($offer_details)): ?>
+                                <?php foreach($offer_details as $offer): ?>
+                                    <div>
+                                        <?php echo $offer["Offer_Details"]; ?>
+                                    </div>
+                                    <br>
+                                <?php endforeach; ?>
+                            <?php else:?>
+                                <div>No Offers available</div>
+                            <?php endif; ?>
                     <?php endif; ?>
-                <?php endif; ?>
-            </div>
-        </div>
+                </article>
+        </main>
     </body>
 </html>
